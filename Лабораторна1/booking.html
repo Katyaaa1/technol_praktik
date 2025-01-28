@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронювання</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 22px;
+            color: #333;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #555;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .radio-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .radio-group input {
+            width: auto;
+            margin-right: 5px;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Готелі України - Бронювання</h1>
+        <form id="bookingForm" onsubmit="submitForm(event)">
+            <label for="firstName">Ім'я (латиницею): <span style="color: red;">*</span></label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Прізвище (латиницею): <span style="color: red;">*</span></label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Електронна адреса:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="city">Місто/регіон:</label>
+            <input type="text" id="city" name="city">
+
+            <label for="phone">Номер телефону: <span style="color: red;">*</span></label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="service">Оберіть послугу: <span style="color: red;">*</span></label>
+            <select id="service" name="service" required>
+                <option value="">Оберіть</option>
+                <option value="room">Номер</option>
+                <option value="conference">Конференц-зал</option>
+                <option value="spa">Спа</option>
+            </select>
+
+            <label>Для кого бронюєте? (за бажанням)</label>
+            <div class="radio-group">
+                <input type="radio" id="forMyself" name="bookingFor" value="myself" checked>
+                <label for="forMyself">Для себе</label>
+                <input type="radio" id="forOthers" name="bookingFor" value="others">
+                <label for="forOthers">Для іншого гостя</label>
+            </div>
+
+            <label>Ви подорожуєте у справах? (за бажанням)</label>
+            <div class="radio-group">
+                <input type="radio" id="onBusinessYes" name="onBusiness" value="yes">
+                <label for="onBusinessYes">Так</label>
+                <input type="radio" id="onBusinessNo" name="onBusiness" value="no" checked>
+                <label for="onBusinessNo">Ні</label>
+            </div>
+
+            <label for="specialRequests">Напишіть свої особливі побажання:</label>
+            <textarea id="specialRequests" name="specialRequests" rows="3"></textarea>
+            <div class="button-container">
+                <button type="submit">Забронювати</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Зупиняє перезавантаження сторінки
+            alert('Успішно заброньовано!');
+            window.location.href = 'hotel_booking.html'; // Повертає на головну сторінку
+        }
+    </script>
+</body>
+</html>

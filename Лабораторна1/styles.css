@@ -1,0 +1,372 @@
+/* Базові стилі */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+header {
+  background: #f8f9fa;
+  padding: 10px 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  padding: 50px 20px;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-text .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #2196f3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.services {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f1f8e9;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.service-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #f8f9fa;
+}
+
+/* --- Стилі для about.html --- */
+
+/* Секція Hero для "Про нас" */
+.about-hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+}
+
+.about-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Секція "Наші переваги" */
+.case-studies {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f1f8e9;
+}
+
+.case-studies h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.case-gallery {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.case-item {
+  width: 300px;
+  text-align: center;
+}
+
+.case-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Секція "Відгуки" */
+.testimonials {
+  text-align: center;
+  padding: 50px 20px;
+  background: #fff;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.testimonial {
+  display: inline-block;
+  text-align: center;
+  margin: 20px;
+  max-width: 300px;
+}
+
+.testimonial img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.testimonial p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.testimonial h4 {
+  font-weight: bold;
+  color: #333;
+}
+
+/* --- Стилі для contact.html --- */
+
+/* Секція Hero для "Контакти" */
+.contacts-hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+}
+
+.contacts-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contacts-hero p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Секція Hero для "Контакти" */
+.contact-hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+}
+
+.contact-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-hero p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Інформація про контакти */
+.contact-info {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f1f8e9;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.detail {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.detail h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.detail p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Форма для зв'язку */
+.contact-form {
+  text-align: center;
+  padding: 50px 20px;
+  background: #fff;
+}
+
+.contact-form h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 
+
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  background: #f9f9f9;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #2196f3;
+  background: #e3f2fd;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background: #2196f3;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #1976d2;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px 20px;
+  background: #f8f9fa;
+  font-size: 0.9rem;
+  color: #666;
+}
+.featured-hotel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 10%;
+  background: #f9f9f9;
+}
+
+.hotel-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.hotel-info {
+  max-width: 500px;
+  padding-left: 40px;
+}
+
+.hotel-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.hotel-info p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.hotel-info .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hotel-info .btn:hover {
+  background: #0056b3;
+}
