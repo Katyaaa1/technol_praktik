@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Палітра кольорів</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>🌈 Палітра кольорів</h1>
+    <div class="palette-container" id="paletteContainer"></div>
+
+    <!-- Модальне вікно -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">×</button>
+            <h2 id="paletteTitle"></h2>
+            <div class="colors-grid" id="colorsContainer"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Повідомлення про копіювання -->
+<div id="copyMessage">
+    <span id="copyText">COPIED!</span>
+    <span id="copyColor"></span>
+</div>
+
+<!-- Аудіо для копіювання -->
+<audio id="copySound" src="src_notify.mp3"></audio>
+
+</body>
+</html>

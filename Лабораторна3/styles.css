@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png'), #2E2EFF;
+    color: white;
+    padding: 20px;
+}
+
+.palette-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.palette-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+    transition: transform 0.2s;
+    width: 230px; /* Збільшили ширину */
+}
+
+.palette-card:hover {
+    transform: scale(1.05);
+}
+
+.palette-preview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+}
+
+.color-box {
+    width: 100%;
+    height: 50px; /* Збільшили висоту */
+}
+
+.palette-footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+/* --- Модальне вікно --- */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;
+    max-width: 600px; /* Збільшили розмір вікна */
+    position: relative;
+    color: black;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.colors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.color-box-large {
+    width: 100%;
+    height: 70px; /* Збільшили висоту */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    text-shadow: 1px 1px 2px black;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #000;
+}
+
+.color-box-large:hover {
+    opacity: 0.8;
+}
+/* Повноекранне повідомлення про копіювання */
+#copyMessage {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 255, 0, 0.9);
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+#copyText {
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px black;
+}
+
+#copyColor {
+    font-size: 24px;
+    opacity: 0.8;
+}
