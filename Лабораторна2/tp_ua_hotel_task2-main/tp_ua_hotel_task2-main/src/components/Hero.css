@@ -1,0 +1,26 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-text .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #2196f3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}

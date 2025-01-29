@@ -1,0 +1,112 @@
+.contact-hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+}
+
+.contact-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-hero p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Інформація про контакти */
+.contact-info {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f1f8e9;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.detail {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.detail h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.detail p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Форма для зв'язку */
+.contact-form {
+  text-align: center;
+  padding: 50px 20px;
+  background: #fff;
+}
+
+.contact-form h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  background: #f9f9f9;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #2196f3;
+  background: #e3f2fd;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background: #2196f3;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #1976d2;
+}
