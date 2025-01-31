@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Categories</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h2>Our blog</h2>
+    <h1>Resources and insights</h1>
+    <p>The latest industry news, interviews, technologies, and resources.</p>
+</header>
+
+<div class="blog-container">
+    <!-- Ліва панель (категорії) -->
+    <aside class="categories">
+        <h3>Blog categories</h3>
+        <button onclick="filterPosts('all')" class="category-btn">View all</button>
+        <button onclick="filterPosts('Design')" class="category-btn">Design</button>
+        <button onclick="filterPosts('Product')" class="category-btn">Product</button>
+        <button onclick="filterPosts('Software Engineering')" class="category-btn">Software Engineering</button>
+        <button onclick="filterPosts('Customer Success')" class="category-btn">Customer Success</button>
+    </aside>
+
+    <!-- Контейнер для постів -->
+    <main>
+        <div id="postsContainer"></div>
+
+        <!-- Пагінація -->
+        <div class="pagination">
+            <button onclick="window.location.href='index.html'">← Back</button>
+
+            <span id="pageNumber">1</span>
+            <button onclick="nextPage()">Next →</button>
+        </div>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

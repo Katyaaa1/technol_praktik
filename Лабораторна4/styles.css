@@ -1,0 +1,310 @@
+/* Основні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 300px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+button, select {
+    margin: 5px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#postsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.post {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Пагінація */
+.pagination {
+    margin-top: 20px;
+}
+
+/* 🔹 CTA-СЕКЦІЯ (No long-term contracts) */
+.cta-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.cta-content {
+    max-width: 40%;
+    text-align: left;
+}
+
+.cta-content h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.cta-content p {
+    font-size: 18px;
+    color: #666;
+}
+
+.cta-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.learn-more {
+    background: none;
+    border: 2px solid black;
+}
+
+.get-started {
+    background: #6c47ff;
+    color: white;
+}
+
+/*  СТИЛІ ДЛЯ РОЗТАШУВАННЯ 5 ФОТО */
+
+.cta-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    width: 300px;
+    margin: auto;
+    position: relative;
+}
+
+.cta-images img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.img1 { grid-column: 2; grid-row: 1; }
+.img2 { grid-column: 1; grid-row: 2; }
+.img3 { grid-column: 2; grid-row: 2; }
+.img4 { grid-column: 3; grid-row: 2; }
+.img5 { grid-column: 2; grid-row: 3; }
+
+@media (max-width: 768px) {
+    .cta-images {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        width: auto;
+    }
+
+    .cta-images img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* Макет сторінки з категоріями */
+.blog-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Ліва панель (категорії) */
+.categories {
+    width: 250px;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.categories h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.categories button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* Основний контейнер з постами */
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+#postsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.post {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    width: 100%; /* Ширина 100% для постів */
+    max-width: 400px; /* Максимальна ширина */
+    margin: 0 auto; /* Центруємо пости */
+    height: auto; /* Висота автоматична */
+    display: flex;
+    flex-direction: column;
+}
+
+.post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Адаптація для кнопок категорій */
+.category-btn {
+    background-color: #6c47ff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.category-btn:hover {
+    background-color: #4a34c7;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #6c47ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.pagination button:hover {
+    background-color: #4a34c7;
+}
+
+.pagination .active {
+    background-color: #4a34c7;
+    border: 2px solid #fff;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.post-header {
+    text-align: center;
+}
+
+.post-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.post-content {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.related-post {
+    background: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.related-post img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.related-post:hover {
+    background: #ddd;
+}
+
+.back-button {
+    display: block;
+    margin: 20px auto;
+    width: 150px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+/* Стилі для постів у категоріях */
+.category-posts .post {
+    height: auto;
+}
+
+/* Встановлення однакових розмірів для зображень постів у категоріях */
+.category-posts .post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}

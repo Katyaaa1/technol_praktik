@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h2>Our blog</h2>
+    <h1>The latest writings from our team</h1>
+    <p>The latest industry news, interviews, technologies, and resources.</p>
+    <input type="text" id="searchInput" placeholder="🔍 Search" onkeyup="searchPosts()">
+</header>
+
+<div class="filters">
+   <div class="filters">
+    <button onclick="window.location.href='index1.html'">View all</button>
+</div>
+    <button onclick="filterPosts('Design')">Design</button>
+    <button onclick="filterPosts('Product')">Product</button>
+    <button onclick="filterPosts('Software Engineering')">Software Engineering</button>
+    <button onclick="filterPosts('Customer Success')">Customer Success</button>
+    
+    <select id="sortSelect" onchange="sortPosts()">
+        <option value="recent">Most recent</option>
+        <option value="alphabetical">A-Z</option>
+    </select>
+</div>
+
+<div id="postsContainer"></div>
+
+<div class="pagination">
+    <button onclick="prevPage()">← Previous</button>
+    <span id="pageNumber">1</span>
+    <button onclick="nextPage()">Next →</button>
+</div>
+
+<!-- 🔹 CTA-секція (No long-term contracts) -->
+<section class="cta-section">
+    <div class="cta-content">
+        <h2>No long-term contracts.<br>No catches.</h2>
+        <p>Start your 30-day free trial today.</p>
+        <div class="cta-buttons">
+            <button class="btn learn-more">Learn more</button>
+            <button class="btn get-started">Get started</button>
+        </div>
+    </div>
+
+    <div class="cta-images">
+        <img src="foto/img1.jpg" class="img1">
+        <img src="foto/img2.jpg" class="img2">
+        <img src="foto/img3.jpg" class="img3">
+        <img src="foto/img4.jpg" class="img4">
+        <img src="foto/img5.jpg" class="img5">
+    </div>
+</section>
+
+<!-- 🔹 Контакти (маленький шрифт у футері) -->
+<footer>
+    <div class="footer-content">
+        <p>© 2025 Your Blog. All rights reserved.</p>
+        <nav>
+            <a href="#">Overview</a>
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">Careers</a>
+            <a href="#">Help</a>
+            <a href="#">Privacy</a>
+        </nav>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+

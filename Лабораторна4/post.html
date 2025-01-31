@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Details</title>
+    <style>
+        /* Загальні стилі */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Стиль для детальної сторінки поста */
+        .post-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .post-header h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .post-header p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .post-image {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .post-content {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Стиль для інших постів (внизу сторінки) */
+        .related-posts {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .related-post {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .related-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .related-post img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .related-post h3 {
+            font-size: 1.2em;
+            margin: 15px 0;
+            color: #333;
+        }
+
+        .related-post p {
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        /* Адаптивний дизайн для мобільних пристроїв */
+        @media (max-width: 768px) {
+            .post-header h1 {
+                font-size: 2em;
+            }
+
+            .post-header p {
+                font-size: 1em;
+            }
+
+            .post-image {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .post-content {
+                font-size: 1em;
+                padding: 15px;
+            }
+
+            .related-posts {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .related-post img {
+                height: 150px;
+            }
+
+            .related-post h3 {
+                font-size: 1em;
+            }
+
+            .related-post p {
+                font-size: 0.8em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .post-header h1 {
+                font-size: 1.5em;
+            }
+
+            .post-header p {
+                font-size: 0.9em;
+            }
+
+            .post-content {
+                font-size: 0.9em;
+                padding: 10px;
+            }
+
+            .related-posts {
+                grid-template-columns: 1fr;
+            }
+
+            .related-post img {
+                height: 120px;
+            }
+
+            .related-post h3 {
+                font-size: 0.9em;
+            }
+
+            .related-post p {
+                font-size: 0.7em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="postDetails">
+        <!-- Деталі поста будуть виведені тут -->
+    </div>
+
+    <div id="relatedPosts" class="related-posts">
+        <!-- Інші пости будуть відображені тут -->
+    </div>
+</div>
+
+<script>
+    const posts = [
+        { title: "UX review presentations", category: "Design", author: "Olivia Rhye", date: "2025-01-20", image: "foto/ux.jpg" },
+        { title: "Migrating to Linear 101", category: "Product", author: "Phoenix Baker", date: "2025-01-19", image: "foto/linear.jpg" },
+        { title: "Building your API stack", category: "Software Engineering", author: "Lana Steiner", date: "2025-01-18", image: "foto/api.jpg" },
+        { title: "PM mental models", category: "Product", author: "Demi Wilkinson", date: "2025-01-16", image: "foto/pm.jpg" },
+        { title: "What is wireframing?", category: "Design", author: "Candice Wu", date: "2025-01-15", image: "foto/wireframing.jpg" },
+        { title: "How collaboration makes us better designers", category: "Design", author: "Natali Craig", date: "2025-01-14", image: "foto/collaboration.jpg" },
+        { title: "Our top 10 Javascript frameworks", category: "Product", author: "Drew Cano", date: "2025-01-13", image: "foto/js.jpg" },
+        { title: "Podcast: Creating a better CX Community", category: "Customer Success", author: "Orlando Diggs", date: "2025-01-12", image: "foto/cx.jpg" },
+    ];
+
+    function displayPostDetails() {
+        const postDetailsContainer = document.getElementById("postDetails");
+        const relatedPostsContainer = document.getElementById("relatedPosts");
+
+        if (!postDetailsContainer || !relatedPostsContainer) return;
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const postTitle = urlParams.get("title");
+        const post = posts.find(p => p.title === postTitle);
+
+        if (post) {
+            postDetailsContainer.innerHTML = `
+                <div class="post-header">
+                    <h1>${post.title}</h1>
+                    <p><strong>${post.category}</strong> by ${post.author}</p>
+                    <p>${new Date(post.date).toDateString()}</p>
+                </div>
+                <img class="post-image" src="${post.image}" alt="${post.title}">
+                <p class="post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius.</p>
+                <button onclick="window.history.back()" class="back-button">← Back</button>
+            `;
+
+            relatedPostsContainer.innerHTML = "<h2>Можливо, вас зацікавить:</h2>";
+            posts.forEach(p => {
+                if (p.title !== postTitle) {
+                    relatedPostsContainer.innerHTML += `
+                        <div class="related-post" onclick="openPost('${p.title}')">
+                            <img src="${p.image}" alt="${p.title}">
+                            <h3>${p.title}</h3>
+                            <p><strong>${p.category}</strong> by ${p.author}</p>
+                        </div>
+                    `;
+                }
+            });
+        } else {
+            postDetailsContainer.innerHTML = "<p>Post not found.</p>";
+        }
+    }
+
+    function openPost(title) {
+        window.location.href = `post.html?title=${encodeURIComponent(title)}`;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        if (document.getElementById("postDetails")) {
+            displayPostDetails();
+        }
+    });
+</script>
+
+</body>
+</html>
